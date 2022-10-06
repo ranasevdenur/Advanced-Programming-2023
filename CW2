@@ -1,17 +1,18 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>TC Kimlik/IBAN Doğrula </title>
 
-  <style> /* CSS comment */
+  <style> /* CSS code in use */
     body { max-width: 440px; }
-    input { width: 50px }
-    .out {
+    #sample { overflow-x: auto; }
+    #kimlik { width: 90%; }
+    #out {
         font-size: 18px;
-        background: blue;
+        background: red;
         color: white;
         text-align: center;
         padding: 10px;
@@ -19,24 +20,24 @@
   </style>
 </head>
 
-<body>   <!-- HTML comment: Modify all items marked xxx -->
+<body>
 
-<h2>This text is not shown. Why?</h2>
-TC Kimlik/IBAN Doğrula  
-<input type=number value=0 onChange="out.innerText=value">
-&emsp;
-<button onClick="verifyIBAN()">TC Kimlik/IBAN Doğrula </button>
-<p class=out>0</p>
-
+<h2 id=title></h2>
+<input type=text id=kimlik>
+<button onClick="arttir()">arttir</button>
+<p id=out></p>
 <hr />
 <b>Sample code</b>
-<pre>This text is not shown. Why?</pre>
-
+<pre id=sample></pre>
 <hr />
-<p>Ref: <a href="https://www.w3schools.com/js/" 
-   target="NewTab">JS Tutorial</a>
+<p>Ref: <a href="https://www.wikiwand.com/tr/T.C._Kimlik_Numaras%C4%B1" 
+   target="NewTab">T.C. Kimlik -- Vikipedia</a><br>
+   <a href="https://matemacik.blogspot.com/2020/03/tc-kimlik-numaras.html"
+   target="NewTab">Matemacik -- yöntem burada</a><br>
+   <a href="https://en.wikipedia.org/wiki/International_Bank_Account_Number#Validating_the_IBAN" target="NewTab">Validating the IBAN</a>
 </p>
 
+<!-- <script src="../util/Util.js"></script> -->
 <script>
 "use strict";
 //https://stackoverflow.com/questions/29275649/javascript-iban-validation-check-german-or-austrian-iban
@@ -91,12 +92,32 @@ function report() {
     out.innerText += '\n'+v+' '+t
     console.log(v, t)
 }
+
+function arttir(s) {
+    if (typeof s != 'string') s = String(s)
+    const s1= s.split("")
+    var uzunluk= s1.length
+    var conuter =0
+    let lnum=""
+    for (let i = (uzunluk-1); i >=0; i--) {
+        counter++
+        if(Number(s1[i]==9)){
+            break
+        }
+    }
+    for(let i = (uzunluk-(1+counter)); i<(uzunluk-1) ;i++){
+        lnum+=s1[i]
+    }
+    --------
+}
+
     title.innerText = document.title
     sample.innerText = verifyIBAN+'\n'+report
     kimlik.onchange = report
     kimlik.value = '212 212 212 72'
     report()
 </script>
+<script src="/JS/navbar.js"></script>
 
 </body>
 </html>
