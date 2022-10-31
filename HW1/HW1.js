@@ -17,8 +17,8 @@ function tableFor(evt) {
 
 function analyze(min=0) {
   let a = [];
+  let index = 0;
   for (let e of EVENTS) {
-    let index = 0;
     for(let entry of JOURNAL){
       if(entry.events.includes(e))
         index+=1;
