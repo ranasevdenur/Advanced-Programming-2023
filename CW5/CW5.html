@@ -115,10 +115,9 @@
         var mins = ~~((a % 3600));
         var ret = "";
         if (hrs > 0) {
-          ret += hrs + ":" + (mins < 10 ? "0" : mins%100);
+              ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
         }
-        ret += hrs + ":" + (mins < 10 ? "0" : mins%100);
-
+        ret += "" + mins;
         chargeMinute.innerText = ret + " hours left";
       }
     }
