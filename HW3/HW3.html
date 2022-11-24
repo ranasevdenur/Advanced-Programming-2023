@@ -11,13 +11,8 @@
 </head>
 
 <body>
-  
-  <button id="start" onclick="start()">Start</button>
-  <button id="pause" onclick="pause()">Pause</button>
-  <button id="start" onclick="stop()">Stop</button>
-  <button id="prev" onclick="prevFrame()" disabled>Previous</button>
-  <button id="next" onclick="nextFrame()" disabled>Next</button>
-  <p id="sprite" class="sprite"></p>
+
+  <br/>
 
   <script>
     var fix = setInterval(function () {
@@ -32,8 +27,8 @@
       if (i >= 7) {
         i = 1;
       }
-      c.clearRect(0, 0, 400, 199)
-      c.drawImage(images[i - 1], 0, 0, 400, 199);
+      c.clearRect(0, 0, 600, 299)
+      c.drawImage(images[i - 1], 0, 0, 600, 299);
 
     }, 85);
     var images = new Array();
@@ -45,10 +40,10 @@
     var c = canvas.getContext("2d");
     function animate() {
       document.body.append(canvas);
-      canvas.width = 400;
-      canvas.height = 199;
+      canvas.width = 600;
+      canvas.height = 299;
     }
-    setInterval(fix, 200);
+    setInterval(fix, 300);
 
     function fetching() {
       for (var i = 1; i < 7; i++) { 
@@ -113,6 +108,17 @@
     fetching();
 
   </script>
+
+<br/>
+<br/>
+    
+<button id="start" onclick="start()">Start</button>
+<button id="pause" onclick="pause()">Pause</button>
+<button id="start" onclick="stop()">Stop</button>
+<button id="prev" onclick="prevFrame()" disabled>Previous</button>
+<button id="next" onclick="nextFrame()" disabled>Next</button>
+<p id="sprite" class="sprite"></p>
+
 </body>
 
 </html>
