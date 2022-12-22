@@ -89,11 +89,11 @@ class Graph extends Menu {
   }
   loadImage(url) {
     switch (Number(url)) {
-      case 1: url = "../images/balon.jpg"
+      case 1: url = "../balon.png" 
         break;
-      case 2: url = "../images/cilek.jpg"
+      case 2: url = "../cilek.jpeg"
         break;
-      case 3: url = "../images/cicek.jpg"
+      case 3: url = "../cicek.jpeg"
         break;
       default: //do nothing
     }
@@ -134,20 +134,33 @@ class Graph extends Menu {
     return this.context.getImageData(x, y, 1, 1).data;
   }
 
-  flipHorizontal(){
-    console.log(counter);
-    cx.translate(img.width,0);
-    cx.scale(-1,1);
-    cx.drawImage(img,0,0);
-    counter++;
-    if(counter==2){
-    cx.translate(img.width,img.height);
-    cx.scale(-1,1);
-    cx.drawImage(img,0,0);
+  flipHorizontal() {
+        let id = this.context.getImageData(0, 0, this.W, this.H);
+        let data = id.data;
+        for (let i = 0; i < data.length; i += 4) {
+            var y = parseInt(i / id.width / 4, 10);
+            var x = (i / 4 - y * id.width);
+            if (x < Math.floor((this.W) / 2)) {
+                let Xmirror = ((this.W) - x);
+                let idx = (y * (this.W) + (Xmirror)) * 4;
+                let R = data[i];
+                let G = data[i + 1];
+                let B = data[i + 2];
+                let A = data[i + 3];
+                data[i] = data[idx];
+                data[i + 1] = data[idx + 1];
+                data[i + 2] = data[idx + 2];
+                data[i + 3] = data[idx + 3];
+                data[idx] = R;
+                data[idx + 1] = G;
+                data[idx + 2] = B;
+                data[idx + 3] = A;
 
-      counter=0;
+            }
+        }
+        this.context.putImageData(id, 0, 0);
     }
-  }
+
 }
 
 function init() {
