@@ -8,19 +8,19 @@
     "theme_color": "#457cdb",
     "icons": [
         {
-            "src": "Myavatar.jpg",
+            "src": "JavaScript-logo.png",
             "sizes": "192x192",
-            "type": "image/jpg"
+            "type": "image/png"
         },
         {
-            "src": "Myavatar.jpg",
+            "src": "JavaScript-logo.png",
             "sizes": "96x96",
-            "type": "image/jpg"
+            "type": "image/png"
         },
         {
-            "src": "Myavatar.jpg",
+            "src": "JavaScript-logo.png",
             "sizes": "512x512",
-            "type": "image/jpg"
+            "type": "image/png"
         }
     ]
 }
