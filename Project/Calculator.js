@@ -1,7 +1,6 @@
 function forclear() {
       document.getElementById("output").innerHTML = "0";
 }
-
 function removeZero() {
       var value = document.getElementById("output").innerHTML;
       if (value == "0") {
@@ -15,7 +14,18 @@ function perc() {
       value = value / 100;
       document.getElementById("output").innerHTML=value;
 }
-
+function square() {
+      removeZero()
+      var value = document.getElementById("output").innerHTML;
+      value = value * value;
+      document.getElementById("output").innerHTML=value;
+}
+function cube() {
+      removeZero()
+      var value = document.getElementById("output").innerHTML;
+      value = value * value * value;
+      document.getElementById("output").innerHTML=value;
+}
 function fordisplay(myvalue) {
       removeZero()
       document.getElementById("output").innerHTML+=myvalue;
