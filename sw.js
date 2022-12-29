@@ -1,6 +1,5 @@
-const CACHE ='Advanced-Programming-2023'
-const FILES = ['/CW0/CW0.html', '/CW1/CW1.html', '/CW2/CW2.html', '/CW4/CW4.html', '/CW5/CW5.html','/CW6/CW6.html','/CW7/CW7.html','/CW8/CW8.html','/CW9/CW9.html','/HW1/HW1.html','/HW3/HW3.html','/Project/Calculator.html']
-
+const CACHE ='JS_Class'
+const FILES = ['/JS', '/JS/classwork_part1.html', '/JS/classwork_part2.html', '/JS', '/JS/cw4.html','/JS/CW5-CAL%C4%B0SMA/work/EloquentJS.html','/JS/CW6-File.html','/JS/cw7/CW7.html','/JS/cw8.html','/JS/CW9.html']
 function installCB(e) {
   e.waitUntil(
     caches.open(CACHE)
