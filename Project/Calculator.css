@@ -2,7 +2,7 @@ html{
       font-family: arial;
 }
 .display {
-      background-color: rgb(201, 201, 201);
+      background-color: rgb(255, 182, 193);
       padding: 15px;
       width: 250px;
       height: 90px;
@@ -14,16 +14,16 @@ button {
       width: 67px;
       height: 45px;
       margin-top: 10px;
-      background-color: rgb(194, 194, 194);
+      background-color: rgb(255, 174, 185);
       font-size: 20px;
 }
 button:hover {
       cursor: pointer;
-      background-color: rgb(182, 178, 178);
+      background-color: rgb(238, 162, 173);
 }
 button:focus {
       outline: none;
 }
 button:active {
-      background-color: rgb(136, 136, 136);
+      background-color: rgb(205, 140, 149);
 }
