@@ -14,16 +14,16 @@ button {
       width: 67px;
       height: 45px;
       margin-top: 10px;
-      background-color: rgb(255, 174, 185);
+      background-color: rgb(255, 193, 193);
       font-size: 20px;
 }
 button:hover {
       cursor: pointer;
-      background-color: rgb(238, 162, 173);
+      background-color: rgb(238, 180, 180);
 }
 button:focus {
       outline: none;
 }
 button:active {
-      background-color: rgb(205, 140, 149);
+      background-color: rgb(205, 155, 155);
 }
