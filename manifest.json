@@ -1,24 +1,24 @@
 {
-    "name": "Tugce Kocak",
-    "description": "Advanced Programming Classwork",
-    "short_name": "tugceJS",
-    "start_url": "/tugceJS/index.html",
+    "name": "Rana Sevdenur Kazan",
+    "description": "Advanced Programming",
+    "short_name": "Advanced-Programming-2023",
+    "start_url": "/Advanced-Programming-2023/index.html",
     "display": "standalone",
     "background_color": "white",
     "theme_color": "#457cdb",
     "icons": [
         {
-            "src": "JavaScript-logo.png",
+            "src": "Myavatar.jpg",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "JavaScript-logo.png",
+            "src": "Myavatar.jpg",
             "sizes": "96x96",
             "type": "image/png"
         },
         {
-            "src": "JavaScript-logo.png",
+            "src": "Myavatar.jpg",
             "sizes": "512x512",
             "type": "image/png"
         }
